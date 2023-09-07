@@ -4,7 +4,7 @@ description: Nous avons des informations, mais celle-ci est pour l'instant perdu
 
 # Utiliser la session
 
-Nous avons des informations, mais celle-ci est pour l'instant perdue « à chaque rafraichissement »… C'est dommage d'autant plus qu'en PHP sauvegarder des informations c'est simple comme bonjour.
+Nous avons des informations, mais celle-ci est pour l'instant perdue « à chaque rafraîchissement »… C'est dommage d'autant plus qu'en PHP, sauvegarder des informations c'est simple comme bonjour.
 
 ::: details Sommaire
 [[toc]]
@@ -12,19 +12,19 @@ Nous avons des informations, mais celle-ci est pour l'instant perdue « à chaqu
 
 ## Introduction
 
-En PHP l'usage de la session est transparent, c'est à dire que vous n'avez pas vraiment à vous souciez du fonctionnement de celle-ci tout ce que vous devez retenir c'est que vos valeurs sont disponible dans les tableaux :
+En PHP l'usage de la session est transparent, c'est à dire que vous n'avez pas vraiment à vous soucier du fonctionnement de celle-ci tout ce que vous devez retenir c'est que vos valeurs sont disponibles dans les tableaux :
 
 - `$_SESSION`
 - `$_COOKIE`
 
 ::: tip Super-globales ?
-C'est deux variables sont des `super-globales` elles sont donc toutes les deux en permanence disponible dans votre code, et sont automatiquement remplies dès le début du chargement de votre page.
+Ces deux variables sont des `super-globales` elles sont donc toutes les deux en permanence disponibles dans votre code, et sont automatiquement remplies dès le début du chargement de votre page.
 :::
 
 La SESSION comme le COOKIE sont donc des variables « un peu magiques » qui vont vous permettre de sauvegarder des données entre chaque chargement de pages. Elles ont chacune un usage propre :
 
-- La session servira pour des données temporaires. Les valeurs de la session sont sauvegardées **sur le serveur** (donc non modifiable par un utilisateur).
-- Le cookie servira plus pour de la sauvegarde de données « plus longue durée », mais non sensible. Exemple une préférence d'affichage, ou un identifiant permettant de suivre l'activité d'un utilisateur.
+- La session servira pour des données temporaires. Les valeurs de la session sont sauvegardées **sur le serveur** (donc non modifiables par un utilisateur).
+- Le cookie servira plus pour de la sauvegarde de données « plus longue durée », mais non sensible. Exemple : une préférence d'affichage, ou un identifiant permettant de suivre l'activité d'un utilisateur.
 
 ## Sauvegarder dans la session
 
@@ -35,7 +35,7 @@ session_start();
 ```
 
 ::: tip C'est tout
-À partir de cet instant vous avez maintenant accès à la SESSION de l'utilisateur :cool:.
+À partir de cet instant, vous avez maintenant accès à la SESSION de l'utilisateur :cool:.
 :::
 
 ::: warning Oui mais…
@@ -78,7 +78,7 @@ php -S localhost:9000
 
 ### Démarrer la session
 
-Pour ça, dans le fichier `index.php`, ajouter tout en haut, la ligne de code suivante :
+Pour ça, dans le fichier `index.php`, ajoutez tout en haut, la ligne de code suivante :
 
 ```php
 session_start();
@@ -210,6 +210,6 @@ Libre à vous de choisir Cookie ou Session. Cependant, n'oubliez pas que les Coo
 
 ## La suite…
 
-La SESSION ou les Cookies servent pour différentes choses sur Internet. La persistance des données peut servir à du tracking (vous le savez…), mais également pour gérer une authentification client. Dans nos développements la SESSION et les Cookies nous serviront principalement pour garder une trace de l'utilisateur afin de le reconnaitre quand celui-ci navigue de page en page sur votre site Internet.
+La SESSION ou les Cookies servent pour différentes choses sur Internet. La persistance des données peut servir à du tracking (vous le savez…), mais également pour gérer une authentification client. Dans nos développements, la SESSION et les Cookies nous serviront principalement à garder une trace de l'utilisateur afin de le reconnaître quand celui-ci navigue de page en page sur votre site Internet.
 
 Pour la suite, [TP 5, protéger des pages à l'aide de la session](./tp5.md)
